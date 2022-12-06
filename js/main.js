@@ -186,7 +186,8 @@ const displayPosts = async (posts) => {
 }
 
 const toggleComments = (e, postId) => {
-    if(!postId) return;
+    if(!postId || !e) return;
+    //e.target.listener = true;
     comment = [toggleCommentSection(postId), toggleCommentButton(postId)];
     return comment;
 }
